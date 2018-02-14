@@ -48,10 +48,10 @@ export default class RestClient {
       // Simulate an n-second delay in every request
       return this._simulateDelay()
         .then(() => fetchPromise())
-        .then(_extractResponse);
+        .then(this._extractResponse);
     } else {
       return fetchPromise()
-        .then(_extractResponse);
+        .then(this._extractResponse);
     }
   }
 
