@@ -24,7 +24,7 @@ export default class RestClient {
   }
 
   _extractResponse(response) {
-    retturn response.text().then(text => text? JSON.parse(text) : undefined);
+    return response.text().then(text => text? JSON.parse(text) : undefined);
   }
 
   _fetch (route, method, body, isQuery = false) {
